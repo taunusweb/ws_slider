@@ -1,22 +1,22 @@
 {
     "name": "webservices/ws-slider",
-    "description": "",
+    "description": "Slick Slider for WCP",
     "type": "typo3-cms-extension",
     "license": "GPL-2.0-or-later",
     "require": {
-        "typo3/cms-backend": "^9.5",
-        "typo3/cms-core": "^9.5",
-        "typo3/cms-extbase": "^9.5",
-        "typo3/cms-fluid": "^9.5",
-        "typo3/cms-frontend": "^9.5"
+        "typo3/cms-core": "^9.5"
+    },
+    "replace": {
+        "typo3-ter/ws-slider": "self.version"
     },
     "autoload": {
         "psr-4": {
             "WebServices\\WsSlider\\": "Classes/"
         }
     },
-    "version": "0.1.0",
-    "replace": {
-        "ws_slider": "*"
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ws_slider"
+        }
     }
 }
