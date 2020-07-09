@@ -1,0 +1,32 @@
+tt_content.wsslider_ws_slider = FLUIDTEMPLATE
+tt_content.wsslider_ws_slider {
+    layoutRootPaths.0 = EXT:ws_slider/Resources/Private/Layouts/
+    layoutRootPaths.10 = {$plugin.tx_wsslider.view.layoutRootPath}
+    partialRootPaths.0 = EXT:ws_slider/Resources/Private/Partials/
+    partialRootPaths.10 = {$plugin.tx_wsslider.view.partialRootPath}
+    templateRootPaths.0 = EXT:ws_slider/Resources/Private/Templates/Content/
+    templateRootPaths.10 = {$plugin.tx_wsslider.view.templateRootPath}
+    templateName = WsSlider
+    dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    dataProcessing.10 {
+        if.isTrue.field = tx_wsslider_slider
+        table = tx_wsslider_slider
+        pidInList.field = pid
+        where = parentid=###uid### AND deleted=0 AND hidden=0
+        orderBy = sorting
+        markers.uid.field = uid
+        as = data_tx_wsslider_slider
+    }
+dataProcessing.10 {
+        dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    dataProcessing.10 {
+        if.isTrue.field = tx_wsslider_image
+        references {
+            fieldName = tx_wsslider_image
+            table = tx_wsslider_slider
+        }
+        as = data_tx_wsslider_image
+    }
+
+}
+}

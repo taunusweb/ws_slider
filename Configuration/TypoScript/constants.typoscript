@@ -1,0 +1,8 @@
+# cat=ws_slider/file; type=string; label=Path to template root (FE)
+plugin.tx_wsslider.view.templateRootPath =
+
+# cat=ws_slider/file; type=string; label=Path to template partials (FE)
+plugin.tx_wsslider.view.partialRootPath =
+
+# cat=ws_slider/file; type=string; label=Path to template layouts (FE)
+plugin.tx_wsslider.view.layoutRootPath =

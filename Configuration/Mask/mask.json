@@ -1,0 +1,217 @@
+{
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_image": {
+                "sys_file_reference": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    },
+    "tt_content": {
+        "elements": {
+            "ws_slider": {
+                "color": "#000000",
+                "columns": [
+                    "header",
+                    "tx_mask_slider"
+                ],
+                "description": "Slick Slider for Images or Text\/Images",
+                "icon": "fa-sliders",
+                "key": "ws_slider",
+                "label": "Slick Slider",
+                "labels": [
+                    "",
+                    "Slider"
+                ],
+                "options": {
+                    "4": "rte"
+                },
+                "shortLabel": "Slick Slider"
+            }
+        },
+        "sql": {
+            "tx_mask_slider": {
+                "tt_content": {
+                    "tx_mask_slider": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_slider": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "expandSingle": "1",
+                        "levelLinksPosition": "bottom",
+                        "newRecordLinkTitle": "",
+                        "useSortable": "1"
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "maxitems": "",
+                    "minitems": "",
+                    "type": "inline"
+                },
+                "exclude": "1",
+                "inlineIcon": "",
+                "inlineLabel": "",
+                "key": "slider",
+                "l10n_mode": ""
+            }
+        }
+    },
+    "tx_mask_slider": {
+        "sql": {
+            "tx_mask_fullwidth": {
+                "tx_mask_slider": {
+                    "tx_mask_fullwidth": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_headline": {
+                "tx_mask_slider": {
+                    "tx_mask_headline": "tinytext"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_slider": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_link": {
+                "tx_mask_slider": {
+                    "tx_mask_link": "tinytext"
+                }
+            },
+            "tx_mask_text": {
+                "tx_mask_slider": {
+                    "tx_mask_text": "mediumtext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_fullwidth": {
+                "config": {
+                    "cols": "",
+                    "default": "",
+                    "items": [
+                        [
+                            "yes"
+                        ]
+                    ],
+                    "renderType": "checkboxLabeledToggle",
+                    "type": "check"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "fullwidth",
+                "l10n_mode": "",
+                "label": "Image fullwidth",
+                "order": 6
+            },
+            "tx_mask_headline": {
+                "config": {
+                    "default": "",
+                    "eval": "trim",
+                    "is_in": "",
+                    "max": "",
+                    "placeholder": "",
+                    "size": "",
+                    "type": "input"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "headline",
+                "l10n_mode": "",
+                "label": "Headline",
+                "order": 3
+            },
+            "tx_mask_image": {
+                "config": {
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ],
+                    "maxitems": "1",
+                    "minitems": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "image",
+                "l10n_mode": "",
+                "label": "Image",
+                "options": "file",
+                "order": 2
+            },
+            "tx_mask_link": {
+                "config": {
+                    "default": "",
+                    "eval": "",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "blindLinkOptions": "file,mail,folder",
+                                "title": "Link",
+                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1"
+                            }
+                        }
+                    },
+                    "placeholder": "",
+                    "renderType": "inputLink",
+                    "size": "",
+                    "softref": "typolink",
+                    "type": "input",
+                    "wizards": {
+                        "link": {
+                            "icon": "actions-wizard-link",
+                            "params": {
+                                "allowedExtensions": ""
+                            }
+                        }
+                    }
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "link",
+                "l10n_mode": "",
+                "label": "Link",
+                "order": 5
+            },
+            "tx_mask_text": {
+                "config": {
+                    "cols": "",
+                    "default": "",
+                    "enableRichtext": "1",
+                    "eval": "",
+                    "max": "",
+                    "placeholder": "",
+                    "richtextConfiguration": "default",
+                    "rows": "",
+                    "type": "text"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "text",
+                "l10n_mode": "",
+                "label": "Text",
+                "order": 4,
+                "rte": "1"
+            }
+        }
+    },
+    "mask_export": {
+        "extensionName": "ws_slider",
+        "vendorName": "WebServices",
+        "includedElements": [
+            "ws_slider"
+        ]
+    }
+}

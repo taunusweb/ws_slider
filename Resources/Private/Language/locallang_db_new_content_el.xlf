@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-07-09T16:42:49+02:00" product-name="ws_slider">
+    <header/>
+    <body>
+      <trans-unit id="wizards.newContentElement.ws_slider_title">
+        <source>Slick Slider</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.ws_slider_description">
+        <source>Slick Slider for Images or Text/Images</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
