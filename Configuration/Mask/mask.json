@@ -172,13 +172,13 @@
                     "default": "",
                     "items": [
                         [
-                            "image|1"
+                            "image"
                         ],
                         [
-                            "slider|2"
+                            "slider"
                         ]
                     ],
-                    "renderType": "",
+                    "renderType": "checkboxLabeledToggle",
                     "type": "check"
                 },
                 "exclude": "1",

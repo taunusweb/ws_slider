@@ -249,6 +249,7 @@ return [
                         'LLL:EXT:ws_slider/Resources/Private/Language/locallang_db.xlf:tx_wsslider_slider.tx_wsslider_imagelink.I.1',
                     ],
                 ],
+                'renderType' => 'checkboxLabeledToggle',
                 'type' => 'check',
             ],
             'exclude' => '1',
