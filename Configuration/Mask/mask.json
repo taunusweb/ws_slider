@@ -83,14 +83,14 @@
                     "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
-            "tx_mask_imagelink": {
-                "tx_mask_slider": {
-                    "tx_mask_imagelink": "int(11) DEFAULT '0' NOT NULL"
-                }
-            },
             "tx_mask_link": {
                 "tx_mask_slider": {
                     "tx_mask_link": "tinytext"
+                }
+            },
+            "tx_mask_linkimageorslider": {
+                "tx_mask_slider": {
+                    "tx_mask_linkimageorslider": "int(11) DEFAULT '0' NOT NULL"
                 }
             },
             "tx_mask_linktext": {
@@ -166,28 +166,6 @@
                 "options": "file",
                 "order": 2
             },
-            "tx_mask_imagelink": {
-                "config": {
-                    "cols": "",
-                    "default": "",
-                    "items": [
-                        [
-                            "image"
-                        ],
-                        [
-                            "slider"
-                        ]
-                    ],
-                    "renderType": "checkboxLabeledToggle",
-                    "type": "check"
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_slider",
-                "key": "imagelink",
-                "l10n_mode": "",
-                "label": "Link Image or Slider?",
-                "order": 9
-            },
             "tx_mask_link": {
                 "config": {
                     "default": "",
@@ -221,6 +199,28 @@
                 "l10n_mode": "",
                 "label": "CTA Link",
                 "order": 5
+            },
+            "tx_mask_linkimageorslider": {
+                "config": {
+                    "default": "",
+                    "items": [
+                        [
+                            "Image",
+                            "1"
+                        ],
+                        [
+                            "Slider",
+                            "2"
+                        ]
+                    ],
+                    "type": "radio"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "linkimageorslider",
+                "l10n_mode": "",
+                "label": "Image or Slider Link?",
+                "order": 9
             },
             "tx_mask_linktext": {
                 "config": {

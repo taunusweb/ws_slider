@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.0">
-  <file source-language="en" datatype="plaintext" original="messages" date="2020-07-10T10:03:05+02:00" product-name="ws_slider">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-07-10T10:08:46+02:00" product-name="ws_slider">
     <header/>
     <body>
       <trans-unit id="tx_wsslider_slider">
@@ -15,11 +15,11 @@
       <trans-unit id="tx_wsslider_slider.tx_wsslider_image">
         <source>Image</source>
       </trans-unit>
-      <trans-unit id="tx_wsslider_slider.tx_wsslider_imagelink">
-        <source>Link Image or Slider?</source>
-      </trans-unit>
       <trans-unit id="tx_wsslider_slider.tx_wsslider_link">
         <source>CTA Link</source>
+      </trans-unit>
+      <trans-unit id="tx_wsslider_slider.tx_wsslider_linkimageorslider">
+        <source>Image or Slider Link?</source>
       </trans-unit>
       <trans-unit id="tx_wsslider_slider.tx_wsslider_linktext">
         <source>CTA Text</source>
@@ -33,11 +33,11 @@
       <trans-unit id="tx_wsslider_slider.tx_wsslider_fullwidth.I.0">
         <source>yes</source>
       </trans-unit>
-      <trans-unit id="tx_wsslider_slider.tx_wsslider_imagelink.I.0">
-        <source>image</source>
+      <trans-unit id="tx_wsslider_slider.tx_wsslider_linkimageorslider.I.0">
+        <source>Image</source>
       </trans-unit>
-      <trans-unit id="tx_wsslider_slider.tx_wsslider_imagelink.I.1">
-        <source>slider</source>
+      <trans-unit id="tx_wsslider_slider.tx_wsslider_linkimageorslider.I.1">
+        <source>Slider</source>
       </trans-unit>
       <trans-unit id="tt_content.tx_wsslider_slider">
         <source>Slider</source>
