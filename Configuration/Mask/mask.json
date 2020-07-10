@@ -83,6 +83,11 @@
                     "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
+            "tx_mask_imagelink": {
+                "tx_mask_slider": {
+                    "tx_mask_imagelink": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
             "tx_mask_link": {
                 "tx_mask_slider": {
                     "tx_mask_link": "tinytext"
@@ -91,6 +96,11 @@
             "tx_mask_linktext": {
                 "tx_mask_slider": {
                     "tx_mask_linktext": "mediumtext"
+                }
+            },
+            "tx_mask_sliderlink": {
+                "tx_mask_slider": {
+                    "tx_mask_sliderlink": "tinytext"
                 }
             },
             "tx_mask_text": {
@@ -109,7 +119,7 @@
                             "yes"
                         ]
                     ],
-                    "renderType": "checkboxLabeledToggle",
+                    "renderType": "",
                     "type": "check"
                 },
                 "exclude": "1",
@@ -156,6 +166,28 @@
                 "options": "file",
                 "order": 2
             },
+            "tx_mask_imagelink": {
+                "config": {
+                    "cols": "",
+                    "default": "",
+                    "items": [
+                        [
+                            "image|1"
+                        ],
+                        [
+                            "slider|2"
+                        ]
+                    ],
+                    "renderType": "",
+                    "type": "check"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "imagelink",
+                "l10n_mode": "",
+                "label": "Link Image or Slider?",
+                "order": 9
+            },
             "tx_mask_link": {
                 "config": {
                     "default": "",
@@ -187,7 +219,7 @@
                 "inlineParent": "tx_mask_slider",
                 "key": "link",
                 "l10n_mode": "",
-                "label": "Link",
+                "label": "CTA Link",
                 "order": 5
             },
             "tx_mask_linktext": {
@@ -205,8 +237,42 @@
                 "inlineParent": "tx_mask_slider",
                 "key": "linktext",
                 "l10n_mode": "",
-                "label": "CTA Button",
+                "label": "CTA Text",
                 "order": 6
+            },
+            "tx_mask_sliderlink": {
+                "config": {
+                    "default": "",
+                    "eval": "",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "blindLinkOptions": "folder",
+                                "title": "Link",
+                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1"
+                            }
+                        }
+                    },
+                    "placeholder": "",
+                    "renderType": "inputLink",
+                    "size": "",
+                    "softref": "typolink",
+                    "type": "input",
+                    "wizards": {
+                        "link": {
+                            "icon": "actions-wizard-link",
+                            "params": {
+                                "allowedExtensions": ""
+                            }
+                        }
+                    }
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "sliderlink",
+                "l10n_mode": "",
+                "label": "Link Image or whole Slider",
+                "order": 8
             },
             "tx_mask_text": {
                 "config": {

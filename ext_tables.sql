@@ -8,8 +8,10 @@ CREATE TABLE tx_wsslider_slider (
     tx_wsslider_fullwidth int(11) DEFAULT '0' NOT NULL,
     tx_wsslider_headline tinytext,
     tx_wsslider_image int(11) unsigned DEFAULT '0' NOT NULL,
+    tx_wsslider_imagelink int(11) DEFAULT '0' NOT NULL,
     tx_wsslider_link tinytext,
     tx_wsslider_linktext mediumtext,
+    tx_wsslider_sliderlink tinytext,
     tx_wsslider_text mediumtext,
     KEY language (l10n_parent,sys_language_uid)
 );

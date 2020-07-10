@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.0">
-  <file source-language="en" datatype="plaintext" original="messages" date="2020-07-10T09:40:42+02:00" product-name="ws_slider">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-07-10T09:55:33+02:00" product-name="ws_slider">
     <header/>
     <body>
       <trans-unit id="wizards.newContentElement.ws_slider_title">
