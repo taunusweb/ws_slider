@@ -17,17 +17,17 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'tx_wsslider_image,tx_wsslider_headline,tx_wsslider_text,tx_wsslider_link,tx_wsslider_fullwidth',
+        'searchFields' => 'tx_wsslider_image,tx_wsslider_headline,tx_wsslider_text,tx_wsslider_link,tx_wsslider_linktext,tx_wsslider_fullwidth',
         'dynamicConfigFile' => '',
         'iconfile' => 'EXT:ws_slider/Resources/Public/Icons/Extension.png',
         'hideTable' => true,
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, tx_wsslider_image, tx_wsslider_headline, tx_wsslider_text, tx_wsslider_link, tx_wsslider_fullwidth',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, tx_wsslider_image, tx_wsslider_headline, tx_wsslider_text, tx_wsslider_link, tx_wsslider_linktext, tx_wsslider_fullwidth',
     ],
     'types' => [
         1 => [
-            'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,tx_wsslider_image,tx_wsslider_headline,tx_wsslider_text,tx_wsslider_link,tx_wsslider_fullwidth,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+            'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,tx_wsslider_image,tx_wsslider_headline,tx_wsslider_text,tx_wsslider_link,tx_wsslider_linktext,tx_wsslider_fullwidth,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
         ],
     ],
     'palettes' => [
@@ -157,7 +157,7 @@ return [
             ],
             'exclude' => '1',
             'label' => 'LLL:EXT:ws_slider/Resources/Private/Language/locallang_db.xlf:tx_wsslider_slider.tx_wsslider_fullwidth',
-            'order' => 6,
+            'order' => 7,
         ],
         'tx_wsslider_headline' => [
             'config' => [
@@ -245,7 +245,7 @@ return [
                 'fieldControl' => [
                     'linkPopup' => [
                         'options' => [
-                            'blindLinkOptions' => 'file,mail,folder',
+                            'blindLinkOptions' => 'folder',
                             'title' => 'Link',
                             'windowOpenParameters' => 'height=300,width=500,status=0,menubar=0,scrollbars=1',
                         ],
@@ -263,6 +263,14 @@ return [
             'exclude' => '1',
             'label' => 'LLL:EXT:ws_slider/Resources/Private/Language/locallang_db.xlf:tx_wsslider_slider.tx_wsslider_link',
             'order' => 5,
+        ],
+        'tx_wsslider_linktext' => [
+            'config' => [
+                'type' => 'text',
+            ],
+            'exclude' => '1',
+            'label' => 'LLL:EXT:ws_slider/Resources/Private/Language/locallang_db.xlf:tx_wsslider_slider.tx_wsslider_linktext',
+            'order' => 6,
         ],
         'tx_wsslider_text' => [
             'config' => [

@@ -88,6 +88,11 @@
                     "tx_mask_link": "tinytext"
                 }
             },
+            "tx_mask_linktext": {
+                "tx_mask_slider": {
+                    "tx_mask_linktext": "mediumtext"
+                }
+            },
             "tx_mask_text": {
                 "tx_mask_slider": {
                     "tx_mask_text": "mediumtext"
@@ -112,7 +117,7 @@
                 "key": "fullwidth",
                 "l10n_mode": "",
                 "label": "Image fullwidth",
-                "order": 6
+                "order": 7
             },
             "tx_mask_headline": {
                 "config": {
@@ -158,7 +163,7 @@
                     "fieldControl": {
                         "linkPopup": {
                             "options": {
-                                "blindLinkOptions": "file,mail,folder",
+                                "blindLinkOptions": "folder",
                                 "title": "Link",
                                 "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1"
                             }
@@ -184,6 +189,24 @@
                 "l10n_mode": "",
                 "label": "Link",
                 "order": 5
+            },
+            "tx_mask_linktext": {
+                "config": {
+                    "cols": "",
+                    "default": "",
+                    "eval": "",
+                    "format": "",
+                    "max": "",
+                    "placeholder": "",
+                    "rows": "",
+                    "type": "text"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "key": "linktext",
+                "l10n_mode": "",
+                "label": "CTA Button",
+                "order": 6
             },
             "tx_mask_text": {
                 "config": {

@@ -1,42 +1,43 @@
-<f:if condition="{data.header}">
-    {data.header}<br />
-</f:if>
-
 <f:if condition="{data_tx_wsslider_slider}">
-    <ul>
+    <div class="sdSlider mb-5">
         <f:for each="{data_tx_wsslider_slider}" as="data_item">
-            <li>
-                <f:if condition="{data_item.data.tx_wsslider_fullwidth}">
-    <f:then>
-        On<br />
-    </f:then>
-    <f:else>
-        Off<br />
-     </f:else>
-</f:if>
+            <div class="item">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="sliderbox">
+                            <f:if condition="{data_item.data.tx_wsslider_headline}">
+                                <h2>{data_item.data.tx_wsslider_headline}</h2>
+                            </f:if>
 
-<f:if condition="{data_item.data.tx_wsslider_headline}">
-    {data_item.data.tx_wsslider_headline}<br />
-</f:if>
+                            <f:if condition="{data_item.data.tx_wsslider_text}">
+                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.data.tx_wsslider_text}</f:format.html><br />
+                            </f:if>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <f:if condition="{data_item.data_tx_wsslider_image}">
+                            <f:for each="{data_item.data_tx_wsslider_image}" as="file">
+                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
+                            </f:for>
+                        </f:if>
 
-<f:if condition="{data_item.data_tx_wsslider_image}">
-    <f:for each="{data_item.data_tx_wsslider_image}" as="file">
-        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" /><br />
-        {file.description} / {file.identifier}<br />
-    </f:for>
-</f:if>
-
-<f:if condition="{data_item.data.tx_wsslider_link}">
-    <f:link.page pageUid="{data_item.data.tx_wsslider_link}">{data_item.data.tx_wsslider_link}</f:link.page><br />
-</f:if>
-
-<f:if condition="{data_item.data.tx_wsslider_text}">
-    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.data.tx_wsslider_text}</f:format.html><br />
-</f:if>
-
-
-            </li>
+                    </div>
+                </div>
+            </div>
         </f:for>
-    </ul>
+    </div>
+    <f:if condition="{data_item.data.tx_wsslider_link}">
+        <f:link.page pageUid="{data_item.data.tx_wsslider_link}">{data_item.data.tx_wsslider_link}</f:link.page><br />
+    </f:if>
+    <f:if condition="{data_item.data.tx_wsslider_fullwidth}">
+        <f:then>
+            On<br />
+        </f:then>
+        <f:else>
+            Off<br />
+        </f:else>
+    </f:if>
+    <f:if condition="{data_item.data.tx_wsslider_linktext}">
+        <f:format.nl2br>{data_item.data.tx_wsslider_linktext}</f:format.nl2br><br />
+    </f:if>
 </f:if>
-
