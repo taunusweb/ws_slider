@@ -2,41 +2,78 @@
     <div class="sdSlider mb-5">
         <f:for each="{data_tx_wsslider_slider}" as="data_item">
             <div class="item">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="sliderbox">
-                            <f:if condition="{data_item.data.tx_wsslider_headline}">
-                                <h2>{data_item.data.tx_wsslider_headline}</h2>
-                            </f:if>
+                <f:if condition="{data_item.data.tx_wsslider_fullwidth}">
+                    <f:then>
+                        <div class="row">
+                            <div class="col-12">
+                                <f:if condition="{data_item.data_tx_wsslider_image}">
+                                    <f:for each="{data_item.data_tx_wsslider_image}" as="file">
+                                        <f:if condition="{data_item.data.tx_wsslider_imagelink} == 1">
+                                            <f:then>
+                                                <f:if condition="{data_item.data.tx_wsslider_link}">
+                                                    <f:link.typolink parameter="{data_item.data.tx_wsslider_link}">
+                                                        <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
+                                                    </f:link.typolink>
+                                                </f:if>
+                                            </f:then>
+                                            <f:else>
+                                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
+                                            </f:else>
+                                        </f:if>
+                                    </f:for>
+                                </f:if>
+                                <div class="sliderbox-fullwidth">
+                                    <f:if condition="{data_item.data.tx_wsslider_headline}">
+                                        <h2>{data_item.data.tx_wsslider_headline}</h2>
+                                    </f:if>
 
-                            <f:if condition="{data_item.data.tx_wsslider_text}">
-                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.data.tx_wsslider_text}</f:format.html><br />
-                            </f:if>
+                                    <f:if condition="{data_item.data.tx_wsslider_text}">
+                                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.data.tx_wsslider_text}</f:format.html><br />
+                                    </f:if>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <f:if condition="{data_item.data_tx_wsslider_image}">
-                            <f:for each="{data_item.data_tx_wsslider_image}" as="file">
-                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
-                            </f:for>
-                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="sliderbox">
+                                    <f:if condition="{data_item.data.tx_wsslider_headline}">
+                                        <h2>{data_item.data.tx_wsslider_headline}</h2>
+                                    </f:if>
 
-                    </div>
-                </div>
+                                    <f:if condition="{data_item.data.tx_wsslider_text}">
+                                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.data.tx_wsslider_text}</f:format.html><br />
+                                    </f:if>
+                                    <f:if condition="{data_item.data.tx_wsslider_link}">
+                                        <f:link.typolink parameter="{data_item.data.tx_wsslider_link}"><button class="btn btn-lg btn-primary">{data_item.data.tx_wsslider_linktext}</button></f:link.typolink>
+                                    </f:if>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <f:if condition="{data_item.data_tx_wsslider_image}">
+                                    <f:for each="{data_item.data_tx_wsslider_image}" as="file">
+                                        <f:if condition="{data_item.data.tx_wsslider_linkimageorslider} == 1">
+                                            <f:then>
+                                                <f:if condition="{data_item.data.tx_wsslider_sliderlink}">
+                                                    <f:link.typolink parameter="{data_item.data.tx_wsslider_sliderlink}">
+                                                        <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
+                                                    </f:link.typolink>
+                                                </f:if>
+                                            </f:then>
+                                            <f:else>
+                                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
+                                            </f:else>
+                                        </f:if>
+                                    </f:for>
+                                </f:if>
+
+                            </div>
+                        </div>
+                    </f:else>
+                </f:if>
             </div>
         </f:for>
     </div>
-    <f:if condition="{data_item.data.tx_wsslider_linkimageorslider}">
-        <f:switch expression="{data_item.data.tx_wsslider_linkimageorslider}">
-            <f:case value="1">Value is: 1</f:case>
-            <f:case value="2">Value is: 2</f:case>
-            <f:case value="3">Value is: 3</f:case>
-        </f:switch><br />
-    </f:if>
-
-    <f:if condition="{data_item.data.tx_wsslider_link}">
-        <f:link.page pageUid="{data_item.data.tx_wsslider_link}">{data_item.data.tx_wsslider_link}</f:link.page><br />
-    </f:if>
-
-    <f:if condition="{data_item.data.tx_wsslider_linktext}">
-        <f:format.nl2br>{data_item.data.tx_wsslider_linktext}</f:format.nl2br><br />
+</f:if>

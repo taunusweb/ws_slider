@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "ws_slider".
  *
- * Auto generated 10-07-2020 10:08
+ * Auto generated 10-07-2020 14:37
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
