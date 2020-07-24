@@ -1,17 +1,10 @@
 {
-    "name": "webservices/ws-slider",
+    "name": "webservices/ws_slider",
     "description": "",
     "type": "typo3-cms-extension",
     "license": "GPL-2.0-or-later",
-    "require": {
-        "typo3/cms-backend": "^9.5",
-        "typo3/cms-core": "^9.5",
-        "typo3/cms-extbase": "^9.5",
-        "typo3/cms-fluid": "^9.5",
-        "typo3/cms-frontend": "^9.5"
-    },
     "replace": {
-        "typo3-ter/ws-slider": "self.version"
+        "typo3-ter/ws_slider": "self.version"
     },
     "autoload": {
         "psr-4": {
